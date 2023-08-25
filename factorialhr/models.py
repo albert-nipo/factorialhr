@@ -65,7 +65,7 @@ class Location(pydantic.BaseModel):
     address_line_2: str | None
     postal_code: str | None
     timezone: str | None
-    company_holidays_ids: list[int] | None
+    company_holiday_ids: list[int]
 
 
 class CompanyHoliday(pydantic.BaseModel):
