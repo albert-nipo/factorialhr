@@ -56,8 +56,8 @@ class Webhook(pydantic.BaseModel):
 class Shift(pydantic.BaseModel):
     id: int
     employee_id: int
-    start_at: datetime.date | None
-    end_at: datetime.date | None
+    start_at: datetime.datetime | None
+    end_at: datetime.datetime | None
     state: str | None
     notes: int | None
     location_id: int | None
