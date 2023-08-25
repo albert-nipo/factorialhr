@@ -853,6 +853,11 @@ class ShiftManagementEndpoint:
     def _endpoint(self) -> str:
         return "v1/time/shifts_management"
 
+    async def all(self) -> list[models.Shift]:
+        """
+        Implements https://apidoc.factorialhr.com/reference/get_v1-time-shifts-management
+        """
+        return [models.Shift(**p) for p in await self.api.get(self._endpoint)]
 
 class BreaksEndpoint:
     def __init__(self, api: NetworkHandler):
