@@ -847,8 +847,7 @@ class SupplementsEndpoint:
 class ShiftManagementEndpoint:
     def __init__(self, api: NetworkHandler):
         self.api = api
-        raise NotImplementedError()
-
+        
     @property
     def _endpoint(self) -> str:
         return "v1/time/shifts_management"
