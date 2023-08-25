@@ -302,7 +302,6 @@ class Workplace(pydantic.BaseModel):
     address_line_2: str | None
     postal_code: str | None
     company_id: int
-    payroll_policy_id: int | None
     main: bool
     timezone: str
 
