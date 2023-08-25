@@ -59,7 +59,7 @@ class Shift(pydantic.BaseModel):
     start_at: datetime.datetime | None
     end_at: datetime.datetime | None
     state: str | None
-    notes: int | None
+    notes: str | None
     location_id: int | None
     work_area_id: int | None
     extra_hours: int | None
