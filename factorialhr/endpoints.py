@@ -312,13 +312,13 @@ class LegalEntitiesEndpoint:
         """
         Implements https://apidoc.factorialhr.com/reference/get_v1-core-legal-entities
         """
-        return [models.LegalEntity(**le) for le in await self.api.put(self._endpoint)]
+        return [models.LegalEntity(**le) for le in await self.api.get(self._endpoint)]
 
     async def get(self, *, entity_id: int) -> models.LegalEntity:
         """
         Implements https://apidoc.factorialhr.com/reference/get_v1-core-legal-entities-id
         """
-        return models.LegalEntity(**await self.api.put(f"{self._endpoint}/{entity_id}"))
+        return models.LegalEntity(**await self.api.get(f"{self._endpoint}/{entity_id}"))
 
 
 class KeysEndpoint:
