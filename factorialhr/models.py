@@ -52,7 +52,17 @@ class Webhook(pydantic.BaseModel):
     challenge: str | None
     target_url: str
     company_id: int | None
-
+    
+class Shift(pydantic.BaseModel):
+    id: int
+    employee_id: int
+    start_at: datetime.date | None
+    end_at: datetime.date | None
+    state: str | None
+    notes: int | None
+    location_id: int | None
+    work_area_id: int | None
+    extra_hours: int | None
 
 class Location(pydantic.BaseModel):
     id: int
