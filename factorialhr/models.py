@@ -2,14 +2,16 @@ import datetime
 import enum
 
 import pydantic
+from pydantic import root_validator
 
 
 class HalfDay(enum.StrEnum):
     beggining_of_day = "beggining_of_day"
     end_of_day = "end_of_day"
 
-
-class Employee(pydantic.BaseModel):
+@root_validator(pre=True)
+class Employee(pedantic.BaseModel):
+    type:cls.__name__
     id: int
     first_name: str
     last_name: str
