@@ -10,7 +10,7 @@ class HalfDay(enum.StrEnum):
     end_of_day = "end_of_day"
 
 @root_validator(pre=True)
-class Employee(pedantic.BaseModel):
+class Employee(pydantic.BaseModel):
     type:cls.__name__
     id: int
     first_name: str
